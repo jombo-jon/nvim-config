@@ -1,5 +1,3 @@
--- require("jombojon.set")
--- require("jombojon.plugins")
--- require("jombojon.globals")
-print("JOmbojon")
+require("johe.set")
+require("johe.packer")
 
