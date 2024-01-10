@@ -44,10 +44,10 @@ vim.keymap.set("n","<C-k>","<C-W>k")
 vim.keymap.set("n","<C-l>","<C-W>l")
 
 -- Move Window to Left,Right,Top,Bottom with Ctrl+Shift+
-vim.keymap.set("n","<c-J>","<C-W>J")
-vim.keymap.set("n","<c-K>","<C-W>k")
-vim.keymap.set("n","<c-H>","<C-W>H")
-vim.keymap.set("n","<c-L>","<C-W>L")
+-- vim.keymap.set("n","<c-J>","<C-W>J")
+-- vim.keymap.set("n","<c-K>","<C-W>k")
+-- vim.keymap.set("n","<c-H>","<C-W>H")
+-- vim.keymap.set("n","<c-L>","<C-W>L")
 
 -- Naviguation Page Up/Down
 vim.keymap.set("n","<C-i>","<C-u>zz")
@@ -74,5 +74,4 @@ vim.keymap.set("v","K",":m '<-2<CR>gv=gv")
 -- Explorer
 vim.keymap.set("n","<leader>se" ,":Sexplore<CR>") -- Horizontal Explo
 vim.keymap.set("n","<leader>ve" ,":Vexplore<CR>") -- Vertical Explo
-
 
