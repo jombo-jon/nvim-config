@@ -18,7 +18,11 @@ function GruvboxPencils(color)
 
 	vim.g.gruvbox_material_background = "medium" -- hard, soft, medium
 	vim.g.gruvbox_material_palette = "original" -- original, mix, material
+  vim.g.gruvbox_transparent_bg = 1
 	vim.o.background = "dark" -- or "light" for light mode
+
+  vim.cmd("set background=dark")
+  vim.cmd("highlight Normal ctermbg=NONE guibg=NONE")
 	
 
 end

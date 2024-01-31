@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
 
   -- ColorScheme
   use("gruvbox-community/gruvbox")
+  -- Shade for not having the highligh
+  use("sunjon/shade.nvim")
 
   -- Treesitter
   use("nvim-treesitter/nvim-treesitter", {
@@ -49,4 +51,6 @@ use {
 
   -- LuaSnips
   use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
+
+  
 end)
