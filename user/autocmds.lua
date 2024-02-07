@@ -11,14 +11,14 @@
 
 -- end
 -- General Setup
--- local function setup()
---     vim.cmd [[
---         augroup FileTypeAutocmds
---             autocmd!
---             autocmd FileType vhdl lua require('autocmds').vhdl_setup()
---         augroup END
---     ]]
--- end
+local function setup()
+    vim.cmd [[
+        augroup FileTypeAutocmds
+            autocmd!
+            autocmd FileType vhdl lua require('autocmds').vhdl_setup()
+        augroup END
+    ]]
+end
 
 -- -- VHDL
 local function vhdl_setup()
@@ -32,4 +32,4 @@ local function vhdl_setup()
     -- vim.opt.commentstring="-- %s";
 end
 
-vhdl_setup()
+setup()
