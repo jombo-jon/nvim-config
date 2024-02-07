@@ -1,18 +1,27 @@
-local M = {}
+-- local M = {}
 
+-- -- General Setup
+-- M.setutp = function()
+--     vim.cmd [[
+--         augroup FileTypeAutocmds
+--             autocmd!
+--             autocmd FileType vhdl lua require('autocmds').vhdl_setup()
+--         augroup END
+--     ]]
+
+-- end
 -- General Setup
-M.setutp = function()
+local function setup()
     vim.cmd [[
         augroup FileTypeAutocmds
             autocmd!
-            autocmd FileType vhdl lua require('autocmds').vhdl_setup()
+            autocmd FileType vhdl lua vhdl_setup()
         augroup END
     ]]
-
 end
 
--- VHDL
-M.vhdl_setup = function()
+-- -- VHDL
+local function vhdl_setup()
     vim.cmd [[
         augroup VHDLFileTypeSettings
             autocmd!
@@ -22,4 +31,6 @@ M.vhdl_setup = function()
     vim.opt.commentstring="-- %s";
 end
 
-return M
+-- End call setup
+setup()
+
