@@ -15,7 +15,7 @@ local function setup()
     vim.cmd [[
         augroup FileTypeAutocmds
             autocmd!
-            autocmd FileType vhdl lua require('autocmds').vhdl_setup()
+            autocmd FileType vhdl lua vhdl_setup()
         augroup END
     ]]
 end
