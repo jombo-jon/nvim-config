@@ -77,6 +77,7 @@ vim.keymap.set("n","<leader>se" ,":Sexplore<CR>") -- Horizontal Explo Upper (Def
 vim.keymap.set("n","<leader>ve" ,":Vexplore<CR>") -- Vertical Explo on the Left (Default)
 vim.keymap.set("n","<leader>le" ,":Vexplore<CR>") -- Vertical Explo on the Left
 vim.keymap.set("n","<leader>re" ,":Vexplore!<CR>") -- Vertical Explo on the Right
+vim.keymap.set("n","<leader>te" ,":Texplore<CR>") -- Tabulation Explo 
 
 -- Define the function to set tab settings
 function setTabTo2()
