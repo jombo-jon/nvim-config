@@ -27,7 +27,7 @@ date: {}
 tags:
     -
 hubs:
-    - "[[]]"
+    - 
 urls:
     -
 ---
@@ -40,5 +40,5 @@ urls:
   ),
 },
 {
-  key = "md",
+  key = "markdown",
 })
