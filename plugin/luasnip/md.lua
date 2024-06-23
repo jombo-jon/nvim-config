@@ -19,15 +19,13 @@ local filename = function(_,snip)
 end 
 
 -- ------------ SNIPPETS --------------
-ls.add_snippets("md", {
+ls.add_snippets("markdown", {
   s({trig = "note", regTrig = true}, 
   fmt([[
 ---
 date: {}
 tags:
     -
-hubs:
-    - 
 urls:
     -
 ---
