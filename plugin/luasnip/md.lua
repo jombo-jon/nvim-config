@@ -30,6 +30,7 @@ ls.add_snippets("markdown", {
   s({trig = "note", regTrig = true}, 
   fmt([[---
 date: {}
+para:
 tags:
 urls:
 ---
@@ -56,7 +57,7 @@ urls:
 {}
 ]],{ 
     f(function () return os.date "%Y-%m-%d" end ),
-    c(2, {t "1_projects", t"2_area", t "3_resources",}),
+    c(2, {t("1_projects"), t("2_areas"), t("3_resources"),t("4_archives")}),
     f(filename,{}),
     i(0),
   })
