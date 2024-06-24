@@ -25,20 +25,38 @@ end
 
 -- ------------ SNIPPETS --------------
 ls.add_snippets("markdown", {
+-- ---------
+-- note
   s({trig = "note", regTrig = true}, 
-  fmt([[
----
+  fmt([[---
 date: {}
 tags:
-    -
 urls:
-    -
 ---
 
 # {}
 {}
 ]],{ 
     f(function () return os.date "%Y-%m-%d" end ),
+    f(filename,{}),
+    i(0),
+  })
+  ),
+-- ---------
+-- PARA
+  s({trig = "para", regTrig = true}, 
+  fmt([[---
+date: {}
+para: {}
+tags:
+urls:
+---
+
+# {}
+{}
+]],{ 
+    f(function () return os.date "%Y-%m-%d" end ),
+    c(2, {t "1_projects", t"2_area", t "3_resources",}),
     f(filename,{}),
     i(0),
   })
