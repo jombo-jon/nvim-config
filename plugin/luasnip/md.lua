@@ -38,7 +38,7 @@ urls:
 # {}
 {}
 ]],{ 
-    f(function () return os.date "%Y-%m-%d" end )),
+    f(function () return os.date "%Y-%m-%d" end ),
     f(filename,{}),
     i(0),
   })
