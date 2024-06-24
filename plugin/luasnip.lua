@@ -10,7 +10,7 @@ ls.config.set_config {
   updateevents = "TextChanged,TextChangedI",
 
   -- Autosnippets:
-  enable_autosnippets = true,
+  enable_autosnippets = false,
   ext_opts = {
     [types.choiceNode] = {
       active = {
