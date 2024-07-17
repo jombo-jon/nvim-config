@@ -48,7 +48,7 @@ urls:
   s({trig = "para", regTrig = true}, 
   fmt([[---
 date: {}
-para: {}
+para: {},
 tags:
 urls:
 ---
@@ -57,8 +57,33 @@ urls:
 {}
 ]],{ 
     f(function () return os.date "%Y-%m-%d" end ),
-    c(2, {t("1_projects"), t("2_areas"), t("3_resources"),t("4_archives")}),
+    c(1,{t("1_projects"), t("2_areas"), t("3_resources"),t("4_archives")}),
     f(filename,{}),
+    i(0),
+  })
+  ),
+-- ---------
+-- c #1
+  s({trig = "c ([%a%d_-]+)", regTrig = true}, 
+    d(1,function(args, snip) 
+      local line = "`" .. snip.captures[1] .. "`"
+      return sn(1, t(line))
+    end),
+    i(0)
+  ),
+-- ---------
+-- cb 
+  s({trig = "cb", regTrig = true}, 
+  fmt([[```{}
+{}
+```]],{ 
+    c(1,{
+        i(nil,'yaml'),
+        i(nil,'bash'),
+        i(nil,'vhdl'),
+        i(nil,'python'),
+        i(nil,'json'),
+    }),
     i(0),
   })
   ),

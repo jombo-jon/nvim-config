@@ -97,3 +97,23 @@ end
 -- Create a custom command
 vim.cmd("command! SetTab2 lua setTabTo2()")
 vim.cmd("command! SetTab4 lua setTabTo4()")
+
+-- Review workflow
+-- move file in current buffer to zettelkasten folder
+vim.keymap.set("n", "<leader>ok", ":!mv '%:p' zettelkasten<cr>:bd<cr>")
+-- delete file in current buffer
+vim.keymap.set("n", "<leader>odd", ":!rm '%:p'<cr>:bd<cr>")
+
+vim.cmd("command! ReviewOK !mv \'%:p\' zettelkasten<cr>:bd<cr>")
+
+function confirm_and_delete_buffer()
+  local confirm = vim.fn.confirm("Delete buffer and file?", "&Yes\n&No", 2)
+
+  if confirm == 1 then
+    os.remove(vim.fn.expand "%")
+    vim.api.nvim_buf_delete(0, { force = true })
+    -- Close nvim after
+  end
+end
+
+vim.cmd("command! ReviewNOK lua confirm_and_delete_buffer()")
